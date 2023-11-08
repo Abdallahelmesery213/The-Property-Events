@@ -635,6 +635,9 @@ footer form .btn{
         font-size: 14px;
         line-height: 21px;
     }   
+    .events .event-card {
+        min-height: 535px;
+    }
     .footer-top h4{
         width: 85%;
         font-size: 18px;
