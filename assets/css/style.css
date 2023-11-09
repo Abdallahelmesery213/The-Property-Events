@@ -25,49 +25,82 @@ ul{
 /* start header */
 header{
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     /* padding-bottom: 35px; */
     /* border-bottom: 5px solid #027cc2; */
 }
 header .left-part img{
     width: 100%;
     min-height: 100px;
+    margin-top: 15px;
     cursor: pointer;
 }
-header .nav1{
+header .right-part{
+    width: 74%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+header .right-part .top-nav{
     background-color: #027cc2;
     padding: 0 20px;
+    color: #fff;
+    min-height: 70px;
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+header .right-part .top-nav ul li{
+    margin-right: 21px;
+    position: relative;
+    cursor: pointer;
+}
+header .right-part .top-nav ul li:not(:last-child)::after{
+    content: '';
     position: absolute;
-    width: 74%;
-    min-height: 100px;
+    width: 2px;
+    margin-left: 9px;
+    height: 18px;
+    bottom: 2px;
+    background-color: #fff;
+}
+header .nav1{
+    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
 }
 
 /* header .nav1 ul li:first-of-type{
     border-top: 4px solid #027cc2;
 } */
 header .nav1 ul li{
-    font-size: 15px;
-    margin-right: 15px !important;
+    font-size: 14px;
+    margin-right: 20px !important;
     cursor: pointer;
-    color: #fff;
-    font-family: bruumLightFont;
+    font-family: bruumBoldFont;
+    position: relative;
 }
-/* header .nav1 ul li:hover{
-    border-top: 4px solid #1b75ba;
-    transition: all ease-in-out .1s;
-} */
+header .nav1 ul li:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    margin-left: 9px;
+    height: 18px;
+    bottom: 2px;
+    background-color: #000;
+}
+
 .border-right {
-    border-right: 1px solid #027cc2 !important;
+    border-right: 1px solid #fcfcfc !important;
 }
 header .langs{
-    margin-top: 5px;
+    margin-top: -10px;
 }
 header .langs span{
     font-size: 12px;
-    color: #027cc2;
+    color: #fcfcfc;
     cursor: pointer;
 }
 header .nav2{
@@ -89,7 +122,7 @@ header .nav2 ul li{
 /* end header */
 
 .counter-top{
-    background-color: rgba(240,240,241,255);
+    background-color: #1a1a1a;
     padding: 20px 30px;
 }
 .counter-top .btns {
@@ -110,6 +143,7 @@ header .nav2 ul li{
     font-size: 16px;
     margin-bottom: 0;
     text-align: center;
+    color: #c3c3c3;
 }   
 .counter-top button.btn{
     font-size: 14px;
@@ -245,8 +279,11 @@ header .nav2 ul li{
 .categories img{
     margin-bottom: 25px;
 }
-.gallery{
-    margin: 30px 0;
+.gallery button.btn{
+    display: block;
+    margin: 30px auto;
+    padding: 5px 30px;
+    border-radius: 0;
 }
 .gallery img.img-fluid{
     margin-bottom: 20px;
@@ -255,7 +292,7 @@ header .nav2 ul li{
 
 /* start events */
 .events h3{
-    font-family: bruumBoldFont;
+    font-weight: bold;
     margin: 40px 0;
     text-align: center;
     font-size: 32px;
@@ -370,6 +407,10 @@ footer form .btn{
     .banner {
         height: 600px;
     }
+    .datamatix-section p, .datamatix-section a {
+        font-size: 25px;
+        line-height: 40px;
+    }
 }
 @media only screen and (max-width: 1344px) {
     header .nav1 ul li {
@@ -388,7 +429,11 @@ footer form .btn{
         transform: translateY(-50%);
     }
 }
-
+@media only screen and (max-width: 1168px) {
+    header .right-part .top-nav ul li {
+        font-size: 14px;
+    }
+}
 @media only screen and (max-width: 1059px) {
     /* header .nav1{
         margin-top: 0;
@@ -486,6 +531,30 @@ footer form .btn{
     }
 }
 @media only screen and (max-width: 767px) {
+    header .right-part{
+        position: relative;
+        width: 100%;
+    }
+    header .right-part .top-nav ul li{
+        font-size: 14px;
+    }
+    header .langs span{
+        font-size: 12px;
+    }
+    header .right-part .top-nav {
+        padding: 20px;
+    }
+    header .right-part .top-nav ul li:not(:last-child)::after{
+        position: relative;
+    }
+    header .right-part .top-nav ul li{
+        width: 50%;
+        margin: 5px auto;
+    }
+    header .nav1 ul li:not(:last-child)::after{
+        position: relative;
+        width: 20%;
+    }
     header .left-part img {
         width: auto;
         min-height: auto;
@@ -568,6 +637,10 @@ footer form .btn{
     .categories .cat{
         display: flex;
         justify-content: center;
+    }
+    .category img{
+        margin: 10px auto;
+        display: block;
     }
     .events h5 br{
         display: none;
@@ -678,6 +751,11 @@ footer form .btn{
     }
     .banner .banner-text h3 {
         margin-top: 40%;
+    }
+}
+@media only screen and (max-width: 460px){
+    header .nav1 ul li{
+        width: 35%;
     }
 }
 @media only screen and (max-width: 418px){
